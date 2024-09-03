@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative; /* Ensure positioning context for child elements */
+}
+
+canvas {
+    position: fixed; /* Fixed position to ensure it stays within viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Place canvas behind other elements */
+}
+
+/* Example of other elements that should appear above the canvas */
+.overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    z-index: 1; /* Ensure this element is above the canvas */
+}
